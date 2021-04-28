@@ -17,7 +17,7 @@ luego utilizamos el metodo socket.on le pasamos el vide-status y ahora el callba
 ---
 
 ---
-### MISELANEOUS
+### MISCELLANEOUS   
 ---
 
 Dejo comentado dentro del codigo tambien, ciertos procesos que me parecieron interesantes para poder dejar documentado.
@@ -36,4 +36,4 @@ todo con libreria babel.
 <br>
 <br>
 ### Thomas Wiersch
-     *
+     
