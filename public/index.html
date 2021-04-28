@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="”en”">
+  <head>
+    <meta charset="”utf-8”" />
+    <title>VIdeo sockets</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <div class="titulo">
+      <h1>Web Socket- Socket IO</h1>
+    </div>
+
+    <div class="contenedor-video">
+
+      <div class="video">
+        <video
+          src="./video/sample-mp4-file.mp4"
+          id="video"
+          muted
+          loop
+          controls
+        ></video>
+
+        <div class="buttons">
+          <button id="play">PLAY</button>
+          <button id="pause">PAUSE</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
