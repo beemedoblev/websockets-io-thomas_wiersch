@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+ }
+/*Clases de css basico para la app*/
+.titulo{
+    font-weight: 100;
+    font-style: italic;
+    color:darkgoldenrod;
+}
+
+body{
+    width: 100%;
+    background-color: #eaeaea; /*rojo guerra*/ 
+}
+
+.contenedor-video{
+    border: 1px solid #eaeaea;
+    width: 100%;
+    background:bisque;
+    display:block;
+    margin:auto;
+}
+.video{
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+.button{
+    display:block;
+    margin:auto;
+    width: 100%;
+
+}
+
+video{
+    width: 100%;
+    box-shadow: 0 0 6px;
+}
