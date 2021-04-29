@@ -7,6 +7,7 @@ const io = require('socket.io')(server);
 /*------------middleware para determinar ruta estatica---------------------=-----*/
 
  app.use(express.static('public'));
+ 
 /*------------ruta ---------------------=-----*/
 
 
@@ -16,15 +17,19 @@ const io = require('socket.io')(server);
 
 /*---------------Scoket-------------------------------------------------------------*/
 // aca inicializo la variable play en true, para que el video se reproduzca.
-let play = true;
+let play = null;
+let time = 0;
 io.on('connection', function(socket){
 socket.emit('video-status', {
-    play
+    play,
+    time
 })
 socket.on('video-status',function(data) {
-    play = data.play;
+    play = data.play; 
+    time = data.time;
     socket.broadcast.emit('video-status',{
-        play 
+        play,
+        time 
     })
 })
 })

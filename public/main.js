@@ -11,6 +11,7 @@ console.log(data)
 
 //play viene en true , es decir que cuando sea true el video va a correr
 
+video.currentTime = data.time;
 
 if (data.play){
     video.play();
@@ -22,19 +23,33 @@ if (data.play){
 
 //agrego evento cuando clickeo el boton
 //evento para play
+function emitStatus(play){
+    socket.emit('video-status', {
+        play,
+        time: video.currentTime
+        
+        })
+        
+}
+
 play.addEventListener('click', function(){
     video.play();
-    
-    socket.emit('video-status', {
-    play : true
-    })
+    emitStatus(true);
 })
 //evento para pause
 pause.addEventListener('click', function(){
     video.pause();
-    socket.emit('video-status', {
-        play : false
-    })
+    emitStatus(false);
+    console.log("esto es el video:-->>",video)
+})
+
+adelante.addEventListener('click', function(){
+    video.currentTime += 5;
+    emitStatus(true);
+})
+atras.addEventListener('click', function(){
+    video.currentTime -= 5
+    emitStatus(true);
 })
 
 //Agrego evento para poder esconder y hacer aparecer el boton de play
