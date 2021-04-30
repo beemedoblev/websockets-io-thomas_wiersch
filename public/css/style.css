@@ -15,10 +15,14 @@ body{
 
 .contenedor-video{
     border: 1px solid #eaeaea;
-    width: 100%, min(500px,100%);
+    position: relative;
+    padding-bottom: 56.25%; /*panorámico*/
+    padding-top: 25px;
+    height: 0;
+/*     width: 100%, min(500px,100%);
     background:bisque;
     display:block;
-    margin:auto;
+    margin:auto; */
 
 }
 .video{
@@ -38,4 +42,17 @@ video{
     width: 100%;
     box-shadow: 0 0 6px;
 }
+
+@media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+    }
+  }
+  
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+  }
 

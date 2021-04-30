@@ -23,7 +23,10 @@ luego utilizamos el metodo socket.on le pasamos el vide-status y ahora el callba
 Dejo comentado dentro del codigo tambien, ciertos procesos que me parecieron interesantes para poder dejar documentado.
 
 carpeta ParsedToES5 que tiene parseado a es5 los js
-todo con libreria babel.
+todo con libreria babe(no utilice webpack, porque es una app bastante sencilla y con poco para parsera, pero lo deseable seria usar webpack)
+se agregaron estilos basicos, con media queries si cambia el size del viewport cambia el color.
+
+falto : subir a heroku por un tema de rutas
 
 
 <br>

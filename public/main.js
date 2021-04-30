@@ -22,7 +22,8 @@ if (data.play){
 })
 
 //agrego evento cuando clickeo el boton
-//evento para play
+
+//englobo la funcion emit status para llamarla en los eventos
 function emitStatus(play){
     socket.emit('video-status', {
         play,
@@ -31,7 +32,7 @@ function emitStatus(play){
         })
         
 }
-
+//evento play
 play.addEventListener('click', function(){
     video.play();
     emitStatus(true);
@@ -42,11 +43,12 @@ pause.addEventListener('click', function(){
     emitStatus(false);
     console.log("esto es el video:-->>",video)
 })
-
+//envento ir para adelante
 adelante.addEventListener('click', function(){
     video.currentTime += 5;
     emitStatus(true);
 })
+//evento ir para atras
 atras.addEventListener('click', function(){
     video.currentTime -= 5
     emitStatus(true);
